@@ -53,6 +53,3 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## License
 
 This project was created by BNK.
-
-# l3t10-capstone1
-level 3 capstone
