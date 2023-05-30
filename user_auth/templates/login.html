@@ -1,0 +1,36 @@
+{% extends "auth_base.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<style>
+
+  form{
+  width:50%;
+  margin: 0 auto;
+  box-shadow: 0 0 1px rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 10px;
+  }
+
+  h3{
+  font-family: "Arial Rounded MT Bold"
+
+  }
+
+</style>
+<!--Login-->
+<div class="container py-5">
+
+  <form method="POST">
+    <h3>Log in</h3> <br>
+    {% csrf_token %}
+    {{ login_form|crispy }} <br>
+    <button class="btn btn-primary" type="submit">Login</button><br>
+    <p class="text-center">Don't have an account? <a href="/user_auth/register/">Create an account</a>.</p>
+
+  </form>
+</div>
+
+{% endblock %}
