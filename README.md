@@ -39,10 +39,10 @@ Follow these steps to set up and run the blog web application on your local mach
    cd candidate
 
 2. Build the Docker image:
-   docker build -t l3t10-capstone1 .
+   docker build -t candidate .
 
 3. Run the Docker container:
-   docker run -p 8000:8000 l3t10-capstone1
+   docker run -p 8000:8000 candidate
 
 4. Open your web browser and visit http://localhost:8000 to access the blog application.
 
