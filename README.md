@@ -14,8 +14,8 @@ Follow these steps to set up and run the blog web application on your local mach
 ### Local Development (venv)
 
 1. Clone the repository:
-   git clone https://github.com/bnk-01/l3t10-capstone1
-   cd l3t10-capstone1
+   git clone https://github.com/bnk-01/candidate
+   cd candidate
 
 2. Create and activate a virtual environment:
    python3 -m venv venv
@@ -35,8 +35,8 @@ Follow these steps to set up and run the blog web application on your local mach
 ### Docker
 
 1. Clone the repository:
-   git clone https://github.com/bnk-01/l3t10-capstone1
-   cd l3t10-capstone1
+   git clone https://github.com/bnk-01/candidate
+   cd candidate
 
 2. Build the Docker image:
    docker build -t l3t10-capstone1 .
