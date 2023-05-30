@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blog package &mdash; L3T10 00.00.01 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            L3T10
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">blog package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-blog.admin">blog.admin module</a><ul>
+<li><a class="reference internal" href="#blog.admin.PostAdmin"><code class="docutils literal notranslate"><span class="pre">PostAdmin</span></code></a><ul>
+<li><a class="reference internal" href="#blog.admin.PostAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">PostAdmin.list_display</span></code></a></li>
+<li><a class="reference internal" href="#blog.admin.PostAdmin.list_filter"><code class="docutils literal notranslate"><span class="pre">PostAdmin.list_filter</span></code></a></li>
+<li><a class="reference internal" href="#blog.admin.PostAdmin.media"><code class="docutils literal notranslate"><span class="pre">PostAdmin.media</span></code></a></li>
+<li><a class="reference internal" href="#blog.admin.PostAdmin.prepopulated_fields"><code class="docutils literal notranslate"><span class="pre">PostAdmin.prepopulated_fields</span></code></a></li>
+<li><a class="reference internal" href="#blog.admin.PostAdmin.search_fields"><code class="docutils literal notranslate"><span class="pre">PostAdmin.search_fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-blog.apps">blog.apps module</a><ul>
+<li><a class="reference internal" href="#blog.apps.BlogConfig"><code class="docutils literal notranslate"><span class="pre">BlogConfig</span></code></a><ul>
+<li><a class="reference internal" href="#blog.apps.BlogConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">BlogConfig.default_auto_field</span></code></a></li>
+<li><a class="reference internal" href="#blog.apps.BlogConfig.name"><code class="docutils literal notranslate"><span class="pre">BlogConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-blog.models">blog.models module</a><ul>
+<li><a class="reference internal" href="#blog.models.Post"><code class="docutils literal notranslate"><span class="pre">Post</span></code></a><ul>
+<li><a class="reference internal" href="#blog.models.Post.title"><code class="docutils literal notranslate"><span class="pre">Post.title</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.slug"><code class="docutils literal notranslate"><span class="pre">Post.slug</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.author"><code class="docutils literal notranslate"><span class="pre">Post.author</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.updated_on"><code class="docutils literal notranslate"><span class="pre">Post.updated_on</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.content"><code class="docutils literal notranslate"><span class="pre">Post.content</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.created_on"><code class="docutils literal notranslate"><span class="pre">Post.created_on</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.status"><code class="docutils literal notranslate"><span class="pre">Post.status</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Post.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Post.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">Post.author</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.author_id"><code class="docutils literal notranslate"><span class="pre">Post.author_id</span></code></a></li>
+<li><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">Post.content</span></code></a></li>
+<li><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">Post.created_on</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.get_next_by_created_on"><code class="docutils literal notranslate"><span class="pre">Post.get_next_by_created_on()</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.get_next_by_updated_on"><code class="docutils literal notranslate"><span class="pre">Post.get_next_by_updated_on()</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.get_previous_by_created_on"><code class="docutils literal notranslate"><span class="pre">Post.get_previous_by_created_on()</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.get_previous_by_updated_on"><code class="docutils literal notranslate"><span class="pre">Post.get_previous_by_updated_on()</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.get_status_display"><code class="docutils literal notranslate"><span class="pre">Post.get_status_display()</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.id"><code class="docutils literal notranslate"><span class="pre">Post.id</span></code></a></li>
+<li><a class="reference internal" href="#blog.models.Post.objects"><code class="docutils literal notranslate"><span class="pre">Post.objects</span></code></a></li>
+<li><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">Post.slug</span></code></a></li>
+<li><a class="reference internal" href="#id4"><code class="docutils literal notranslate"><span class="pre">Post.status</span></code></a></li>
+<li><a class="reference internal" href="#id5"><code class="docutils literal notranslate"><span class="pre">Post.title</span></code></a></li>
+<li><a class="reference internal" href="#id6"><code class="docutils literal notranslate"><span class="pre">Post.updated_on</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-blog.urls">blog.urls module</a></li>
+<li><a class="reference internal" href="#module-blog.views">blog.views module</a><ul>
+<li><a class="reference internal" href="#blog.views.PostDetail"><code class="docutils literal notranslate"><span class="pre">PostDetail</span></code></a><ul>
+<li><a class="reference internal" href="#blog.views.PostDetail.model"><code class="docutils literal notranslate"><span class="pre">PostDetail.model</span></code></a></li>
+<li><a class="reference internal" href="#blog.views.PostDetail.template_name"><code class="docutils literal notranslate"><span class="pre">PostDetail.template_name</span></code></a></li>
+<li><a class="reference internal" href="#id7"><code class="docutils literal notranslate"><span class="pre">PostDetail.model</span></code></a></li>
+<li><a class="reference internal" href="#id8"><code class="docutils literal notranslate"><span class="pre">PostDetail.template_name</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#blog.views.PostList"><code class="docutils literal notranslate"><span class="pre">PostList</span></code></a><ul>
+<li><a class="reference internal" href="#blog.views.PostList.queryset"><code class="docutils literal notranslate"><span class="pre">PostList.queryset</span></code></a></li>
+<li><a class="reference internal" href="#blog.views.PostList.template_name"><code class="docutils literal notranslate"><span class="pre">PostList.template_name</span></code></a></li>
+<li><a class="reference internal" href="#id9"><code class="docutils literal notranslate"><span class="pre">PostList.queryset</span></code></a></li>
+<li><a class="reference internal" href="#id10"><code class="docutils literal notranslate"><span class="pre">PostList.template_name</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#blog.views.about"><code class="docutils literal notranslate"><span class="pre">about()</span></code></a></li>
+<li><a class="reference internal" href="#blog.views.home"><code class="docutils literal notranslate"><span class="pre">home()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-blog">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">L3T10</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">blog package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/blog.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="blog-package">
+<h1>blog package<a class="headerlink" href="#blog-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blog.migrations.html">blog.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#module-blog.migrations.0001_initial">blog.migrations.0001_initial module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="blog.migrations.html#blog.migrations.0001_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="blog.migrations.html#blog.migrations.0001_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blog.migrations.html#blog.migrations.0001_initial.Migration.initial"><code class="docutils literal notranslate"><span class="pre">Migration.initial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blog.migrations.html#blog.migrations.0001_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#module-blog.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-blog.admin">
+<span id="blog-admin-module"></span><h2>blog.admin module<a class="headerlink" href="#module-blog.admin" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.admin.PostAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blog.admin.</span></span><span class="sig-name descname"><span class="pre">PostAdmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/admin.html#PostAdmin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.admin.PostAdmin" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelAdmin</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.admin.PostAdmin.list_display">
+<span class="sig-name descname"><span class="pre">list_display</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('title',</span> <span class="pre">'slug',</span> <span class="pre">'status',</span> <span class="pre">'created_on')</span></em><a class="headerlink" href="#blog.admin.PostAdmin.list_display" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.admin.PostAdmin.list_filter">
+<span class="sig-name descname"><span class="pre">list_filter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('status',)</span></em><a class="headerlink" href="#blog.admin.PostAdmin.list_filter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="blog.admin.PostAdmin.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#blog.admin.PostAdmin.media" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.admin.PostAdmin.prepopulated_fields">
+<span class="sig-name descname"><span class="pre">prepopulated_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'slug':</span> <span class="pre">('title',)}</span></em><a class="headerlink" href="#blog.admin.PostAdmin.prepopulated_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.admin.PostAdmin.search_fields">
+<span class="sig-name descname"><span class="pre">search_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['title',</span> <span class="pre">'content']</span></em><a class="headerlink" href="#blog.admin.PostAdmin.search_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-blog.apps">
+<span id="blog-apps-module"></span><h2>blog.apps module<a class="headerlink" href="#module-blog.apps" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.apps.BlogConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blog.apps.</span></span><span class="sig-name descname"><span class="pre">BlogConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/apps.html#BlogConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.apps.BlogConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.apps.BlogConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#blog.apps.BlogConfig.default_auto_field" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.apps.BlogConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'blog'</span></em><a class="headerlink" href="#blog.apps.BlogConfig.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-blog.models">
+<span id="blog-models-module"></span><h2>blog.models module<a class="headerlink" href="#module-blog.models" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.models.Post">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blog.models.</span></span><span class="sig-name descname"><span class="pre">Post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/models.html#Post"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.models.Post" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Blog post Model.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#blog.models.Post.title" title="Permalink to this definition"></a></dt>
+<dd><p>The title of the blog post.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.slug">
+<span class="sig-name descname"><span class="pre">slug</span></span><a class="headerlink" href="#blog.models.Post.slug" title="Permalink to this definition"></a></dt>
+<dd><p>A slug field for the URL.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.author">
+<span class="sig-name descname"><span class="pre">author</span></span><a class="headerlink" href="#blog.models.Post.author" title="Permalink to this definition"></a></dt>
+<dd><p>The author of the blog post.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>User</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.updated_on">
+<span class="sig-name descname"><span class="pre">updated_on</span></span><a class="headerlink" href="#blog.models.Post.updated_on" title="Permalink to this definition"></a></dt>
+<dd><p>The date and time of the last update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>datetime</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.content">
+<span class="sig-name descname"><span class="pre">content</span></span><a class="headerlink" href="#blog.models.Post.content" title="Permalink to this definition"></a></dt>
+<dd><p>The content of the blog post.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.created_on">
+<span class="sig-name descname"><span class="pre">created_on</span></span><a class="headerlink" href="#blog.models.Post.created_on" title="Permalink to this definition"></a></dt>
+<dd><p>The date and time of creation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>datetime</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.status">
+<span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#blog.models.Post.status" title="Permalink to this definition"></a></dt>
+<dd><p>The status of the blog post.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="simple">
+<dt>Meta:</dt><dd><p>This orders post by creation date.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Returns</span> <span class="pre">the</span> <span class="pre">title</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">blog</span> <span class="pre">post</span> <span class="pre">as</span> <span class="pre">a</span> <span class="pre">string.</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="blog.models.Post.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#blog.models.Post.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="blog.models.Post.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#blog.models.Post.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">author</span></span><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.author_id">
+<span class="sig-name descname"><span class="pre">author_id</span></span><a class="headerlink" href="#blog.models.Post.author_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">content</span></span><a class="headerlink" href="#id1" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">created_on</span></span><a class="headerlink" href="#id2" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blog.models.Post.get_next_by_created_on">
+<span class="sig-name descname"><span class="pre">get_next_by_created_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_on&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post.get_next_by_created_on" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blog.models.Post.get_next_by_updated_on">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_on&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post.get_next_by_updated_on" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blog.models.Post.get_previous_by_created_on">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_on&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post.get_previous_by_created_on" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blog.models.Post.get_previous_by_updated_on">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_on&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post.get_previous_by_updated_on" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blog.models.Post.get_status_display">
+<span class="sig-name descname"><span class="pre">get_status_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.IntegerField:</span> <span class="pre">status&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post.get_status_display" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#blog.models.Post.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#blog.models.Post.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">slug</span></span><a class="headerlink" href="#id3" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#id4" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#id5" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">updated_on</span></span><a class="headerlink" href="#id6" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-blog.urls">
+<span id="blog-urls-module"></span><h2>blog.urls module<a class="headerlink" href="#module-blog.urls" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-blog.views">
+<span id="blog-views-module"></span><h2>blog.views module<a class="headerlink" href="#module-blog.views" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.views.PostDetail">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blog.views.</span></span><span class="sig-name descname"><span class="pre">PostDetail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#PostDetail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.PostDetail" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DetailView</span></code></p>
+<p>A view displaying a single blog post.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.PostDetail.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#blog.views.PostDetail.model" title="Permalink to this definition"></a></dt>
+<dd><p>The model class representing the blog post.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.PostDetail.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><a class="headerlink" href="#blog.views.PostDetail.template_name" title="Permalink to this definition"></a></dt>
+<dd><p>The name of the template used for rendering the view.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#id7" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#blog.models.Post" title="blog.models.Post"><code class="xref py py-class docutils literal notranslate"><span class="pre">Post</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id8">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'post_detail.html'</span></em><a class="headerlink" href="#id8" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.views.PostList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blog.views.</span></span><span class="sig-name descname"><span class="pre">PostList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#PostList"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.PostList" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ListView</span></code></p>
+<p>A view displaying a list of blog posts.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.PostList.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#blog.views.PostList.queryset" title="Permalink to this definition"></a></dt>
+<dd><p>The queryset used to retrieve the blog posts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.PostList.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><a class="headerlink" href="#blog.views.PostList.template_name" title="Permalink to this definition"></a></dt>
+<dd><p>The name of the template used for rendering the view.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id9">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Post:</span> <span class="pre">IMPROVE</span> <span class="pre">&amp;</span> <span class="pre">PROTECT</span> <span class="pre">PUBLIC</span> <span class="pre">EDUCATION&gt;,</span> <span class="pre">&lt;Post:</span> <span class="pre">STOP</span> <span class="pre">JOB-KILLING</span> <span class="pre">REGULATIONS&gt;,</span> <span class="pre">&lt;Post:</span> <span class="pre">PROTECT</span> <span class="pre">PRIVATE</span> <span class="pre">PROPERTY</span> <span class="pre">RIGHTS&gt;,</span> <span class="pre">&lt;Post:</span> <span class="pre">SECURE</span> <span class="pre">OUR</span> <span class="pre">BORDER&gt;,</span> <span class="pre">&lt;Post:</span> <span class="pre">PROTECT</span> <span class="pre">THE</span> <span class="pre">RIGHT</span> <span class="pre">TO</span> <span class="pre">LIFE&gt;,</span> <span class="pre">&lt;Post:</span> <span class="pre">DEFEND</span> <span class="pre">THE</span> <span class="pre">2ND</span> <span class="pre">AMENDMENT&gt;]&gt;</span></em><a class="headerlink" href="#id9" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id10">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'index.html'</span></em><a class="headerlink" href="#id10" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="blog.views.about">
+<span class="sig-prename descclassname"><span class="pre">blog.views.</span></span><span class="sig-name descname"><span class="pre">about</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#about"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.about" title="Permalink to this definition"></a></dt>
+<dd><p>Renders the about page, accessible only to authenticated users.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The request object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rendered response.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="blog.views.home">
+<span class="sig-prename descclassname"><span class="pre">blog.views.</span></span><span class="sig-name descname"><span class="pre">home</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#home"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.home" title="Permalink to this definition"></a></dt>
+<dd><p>Renders the home page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The request object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rendered response.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-blog">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-blog" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, bnk.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
